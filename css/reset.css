@@ -66,6 +66,11 @@ ul li {
     list-style: none;
 }
 
+.product__kit {
+    list-style-image: url('/img/icons/breadcrumbs_square.svg');
+    list-style-position: outside;
+}
+
 img {
     vertical-align: top;
 }
