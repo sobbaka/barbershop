@@ -1,6 +1,286 @@
 @import "./reset.css";
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --conteiner-width: 940px;
+    --text-color: #000000;
+    --link-text-color: #ffffff;
+}
+
 body {
     font-family: 'PT Sans', sans-serif;
     color: #000000;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+    background-color: #000000;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+.navigation__list {
+    display: flex;
+    column-gap: 40px;
+}
+
+.navigation__item {}
+
+.navigation__link {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--link-text-color);
+}
+
+.navigation__enter {
+    position: relative;
+}
+
+.navigation__enter::before {
+    content: "";
+    display: inline-block;
+    background: url("/img/icons/login.svg");
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+
+.main {
+    background: url("/img/backgrounds/background_1.jpg") no-repeat;
+}
+
+.logo {
+    max-width: 370px;
+    margin: 0 auto;
+    padding-top: 55px;
+}
+
+.logo__image {}
+
+.advantages {}
+
+.advantages__list {
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 25px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.advantages__item {
+    color: #F7F4F1;
+    max-width: 300px;
+}
+
+.advantages__title {
+    font-size: 30px;
+    line-height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.advantages__title::after {
+    content: "";
+    display: inline-block;
+    background: url("/img/icons/shape_2.svg");
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 29px;
+}
+
+.advantages__text {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.about {}
+
+.about__row,
+.contacts__row {
+    display: flex;
+    background-image: url("/img/backgrounds/pattern-bg.jpg");
+}
+
+.news,
+.gallery,
+.address,
+.enroll {
+    flex-grow: 1;
+    max-width: 470px;
+    padding: 48px 45px 50px 80px;
+}
+
+.title {
+    font-size: 25px;
+    line-height: 42px;
+    padding-bottom: 30px;
+}
+
+.news__item {}
+
+.news__link {
+    color: var(--text-color);
+    padding-bottom: 8px;
+}
+
+.news__time {
+    padding-bottom: 30px;
+}
+
+.news__btn,
+.black__btn {
+    color: #ffffff;
+    font-weight: bold;
+    min-width: 140px;
+    background-color: #000000;
+    padding: 17px 30px;
+}
+
+.right__btn {
+    margin-right: 18px;
+}
+
+.gallery {
+    /* flex-grow: 1;
+    padding: 48px 45px 50px 80px; */
+}
+
+.gallery__img {}
+
+.gallery__navigation {
+    padding: 50px 0;
+}
+
+.gallery__prev {
+    margin-right: 20px;
+}
+
+.gallery__next {}
+
+.contacts {
+    margin-top: 36px;
+    padding-bottom: 65px;
+}
+
+.address {}
+
+.text {}
+
+.time__text {
+    padding-top: 40px;
+}
+
+.address__buttons {
+    padding-top: 52px;
+}
+
+.address__map {}
+
+.address__callback {}
+
+.enroll {}
+
+.enroll__form {}
+
+.form__row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form__column {
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.form__label {
+    padding: 6px;
+    display: inline-block;
+    /* margin-top: 20px; */
+}
+
+.form__input {
+    border: 3px solid #000000;
+    width: 160px;
+    padding: 10px;
+}
+
+.form__btn {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.footer {
+    background-color: #212121;
+    color: #F7F4F1;
+}
+
+.footer__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0 45px 0;
+}
+
+.footer__column {}
+
+.footer__text {}
+
+.footer__title {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.footer__social {}
+
+.social__link {
+    background-color: #000000;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    position: relative;
+}
+
+.social__img {
+    position: absolute;
+}
+
+.social__vk {
+    top: 15%;
+    left: 12%;
+    width: 32px;
+    height: 32px;
+}
+
+.social__instagram {
+    top: 23%;
+    left: 23%;
+    width: 25px;
+    height: 25px;
+}
+
+.social__facebook {
+    top: 23%;
+    left: 23%;
+    width: 25px;
+    height: 25px;
 }
