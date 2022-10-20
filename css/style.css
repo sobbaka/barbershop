@@ -383,17 +383,98 @@ body {
     margin-right: -6px;
 }
 
-.black__btn {}
-
-.title {}
-
-.product__kit {
-    padding-left: 18px;
-}
-
+.pricelist__brands li,
 .product__kit li {
     list-style-image: url('/img/icons/breadcrumbs_square.svg');
     list-style-position: outside;
 }
 
-.kit__item {}
+.inner__title {}
+
+.breadcrumbs__list {}
+
+.breadcrumbs__item {}
+
+.breadcrumbs__link {}
+
+.non-active {}
+
+.pricelist__header {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 62px;
+}
+
+.pricelist__header::before,
+.pricelist__header::after {
+    content: "";
+    border-bottom: 2px solid black;
+    display: inline-block;
+    width: 12%;
+    position: absolute;
+    bottom: 66px;
+}
+
+.pricelist__header::before {
+    left: 0;
+}
+
+.pricelist__header::after {
+    right: 0;
+}
+
+.pricelist_row {
+    display: flex;
+}
+
+.pricelist_row--about {
+    align-items: flex-end;
+}
+
+.pricelist_column {
+    max-width: 470px;
+    width: 100%;
+}
+
+.pricelist__title-small {
+    line-height: 35px;
+}
+
+.pricelist__brands {
+    margin-left: 18px;
+}
+
+.pricelist__brands-item {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.pricelist__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricelist__table-name,
+.pricelist__table-price {
+    border: 2px solid black;
+    padding: 10px 0;
+    width: 50%;
+}
+
+.pricelist__table-name {
+    padding-left: 10px;
+}
+
+.pricelist__table-price {
+    text-align: center;
+}
+
+.pricelist__title--about {
+    padding-top: 54px;
+}
+
+.pricelist__row--about {
+    padding-bottom: 80px;
+}
