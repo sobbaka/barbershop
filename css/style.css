@@ -14,6 +14,10 @@ body {
     font-weight: bold;
 }
 
+.body__image {
+    background-image: url(/img/backgrounds/pattern-bg.jpg);
+}
+
 .hidden {
     display: none;
 }
@@ -38,8 +42,6 @@ body {
     display: flex;
     column-gap: 40px;
 }
-
-.navigation__item {}
 
 .navigation__link {
     font-size: 16px;
@@ -71,10 +73,6 @@ body {
     margin: 0 auto;
     padding-top: 55px;
 }
-
-.logo__image {}
-
-.advantages {}
 
 .advantages__list {
     display: flex;
@@ -160,11 +158,6 @@ body {
     margin-right: 18px;
 }
 
-.gallery {
-    /* flex-grow: 1;
-    padding: 48px 45px 50px 80px; */
-}
-
 .gallery__img {}
 
 .gallery__navigation {
@@ -175,16 +168,10 @@ body {
     margin-right: 20px;
 }
 
-.gallery__next {}
-
 .contacts {
     margin-top: 36px;
     padding-bottom: 65px;
 }
-
-.address {}
-
-.text {}
 
 .time__text {
     padding-top: 40px;
@@ -194,23 +181,10 @@ body {
     padding-top: 52px;
 }
 
-.address__map {}
-
-.address__callback {}
-
-.enroll {}
-
-.enroll__form {}
-
 .form__row {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-}
-
-.form__column {
-    /* display: flex;
-    flex-direction: row; */
 }
 
 .form__label {
@@ -241,16 +215,10 @@ body {
     padding: 64px 0 45px 0;
 }
 
-.footer__column {}
-
-.footer__text {}
-
 .footer__title {
     padding-bottom: 20px;
     text-align: center;
 }
-
-.footer__social {}
 
 .social__link {
     background-color: #000000;
@@ -289,8 +257,6 @@ body {
     background-image: url("/img/backgrounds/pattern-bg.jpg");
     text-transform: uppercase;
 }
-
-.container {}
 
 .inner__title {
     font-size: 30px;
@@ -335,8 +301,6 @@ body {
     display: flex;
 }
 
-.product__column {}
-
 .column-left-padding-90 {
     padding-left: 90px;
 }
@@ -363,13 +327,9 @@ body {
     padding: 20px 0 30px;
 }
 
-.product__status {}
-
 .product__sku {
     color: #AEAEAE;
 }
-
-.product__description {}
 
 .product__order {
     padding: 30px 0 60px;
@@ -377,9 +337,8 @@ body {
 
 .product__price {
     font-weight: bold;
-    min-width: 140px;
     background-color: #E5E5E5;
-    padding: 17px 30px;
+    padding: 17px 45px;
     margin-right: -6px;
 }
 
@@ -388,16 +347,6 @@ body {
     list-style-image: url('/img/icons/breadcrumbs_square.svg');
     list-style-position: outside;
 }
-
-.inner__title {}
-
-.breadcrumbs__list {}
-
-.breadcrumbs__item {}
-
-.breadcrumbs__link {}
-
-.non-active {}
 
 .pricelist__header {
     font-size: 48px;
@@ -477,4 +426,118 @@ body {
 
 .pricelist__row--about {
     padding-bottom: 80px;
+}
+
+.filter__checkbox input[type="checkbox"] {
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+    column-gap: 50px;
+}
+
+.store__filter {
+    text-transform: uppercase;
+    max-width: 240px;
+}
+
+.filter__legend {
+    padding-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.filter__label {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.filter__fieldset {
+    padding-bottom: 40px;
+}
+
+.filter__input {
+    padding-bottom: 10px;
+}
+
+.filter__btn {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #000000;
+    padding: 17px 30px;
+}
+
+.products__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.card {
+    background-color: #fff;
+    width: 220px;
+    box-shadow: 0px 0px 15px rgba(0, 1, 1, 0.2)
+}
+
+.card__name,
+.card__order {
+    max-width: 190px;
+}
+
+.card_info {
+    margin: 0 auto;
+    max-width: 190px;
+}
+
+.card__name,
+.card__order {
+    padding-bottom: 17px;
+}
+
+.card__price {
+    padding: 17px 30px;
+}
+
+.name__uppercase {
+    text-transform: uppercase;
+}
+
+.card__btn {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #000000;
+    padding: 17px 17px;
+}
+
+.store__pagination {
+    padding: 45px 0px;
+}
+
+.pagination__list {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination__item {
+    text-align: center;
+    background-color: #000000;
+    width: 43px;
+    height: 43px;
+    padding: 9px;
+    font-size: 14px;
+}
+
+.pagination__link {
+    color: #fff;
+}
+
+.pagination__link--disabled {
+    color: #000000;
+}
+
+.pagination__item--disabled {
+    background-color: #E5E5E5;
 }
