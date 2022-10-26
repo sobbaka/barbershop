@@ -64,6 +64,94 @@ body {
     top: 5px;
 }
 
+
+/* footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 27px;
+} */
+
+@media (max-width: 750px) {
+    .navigation__link img {
+        padding-bottom: 20px;
+    }
+    .navigation {
+        justify-content: flex-end;
+    }
+    .navigation__list,
+    .navigation__enter {
+        display: none;
+    }
+    .navigation.is-active {
+        display: flex;
+        justify-content: flex-start;
+        padding: 25px 20px;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        height: 100%;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+        width: 100%;
+        row-gap: 25px;
+    }
+    .is-active .navigation__enter {
+        display: block;
+    }
+    .is-active .navigation__list {
+        display: flex;
+        column-gap: 40px;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 13px;
+        padding-top: 30px;
+    }
+    .hamburger {
+        position: relative;
+        display: block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        color: #fff;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
+    .hamburger.is-active {
+        position: fixed;
+        right: 23px;
+        top: 25px;
+    }
+    .hamburger .bar,
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        margin: 6px 0px;
+        transition: 0.4s;
+    }
+    .hamburger.is-active::before {
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+    .hamburger.is-active::after {
+        transform: rotate(45deg) translate( -8px, -8px);
+    }
+    .hamburger.is-active .bar {
+        opacity: 0;
+    }
+}
+
 .main {
     background: url("/img/backgrounds/background_1.jpg") no-repeat;
 }
@@ -111,8 +199,6 @@ body {
     padding-top: 15px;
 }
 
-.about {}
-
 .about__row,
 .contacts__row {
     display: flex;
@@ -133,8 +219,6 @@ body {
     line-height: 42px;
     padding-bottom: 30px;
 }
-
-.news__item {}
 
 .news__link {
     color: var(--text-color);
@@ -157,8 +241,6 @@ body {
 .right__btn {
     margin-right: 18px;
 }
-
-.gallery__img {}
 
 .gallery__navigation {
     padding: 50px 0;
