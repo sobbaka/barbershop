@@ -555,6 +555,33 @@ body {
     background-color: #E5E5E5;
 }
 
+input {
+    background-color: #fff;
+    border: solid 1px black;
+}
+
+.form_wrapper {
+    max-width: 750px;
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: row; */
+    margin: 0 auto;
+}
+
+.form_row {
+    display: flex;
+    column-gap: 35px;
+}
+
+.form_col {
+    flex: 1;
+}
+
+.form_col--flex {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 939px) {
     .container--side_padding {
         padding: 0 10px;
