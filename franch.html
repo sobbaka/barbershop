@@ -138,10 +138,10 @@
                     <div class="form_account_wrapper">
                         <div class="form_row form_row--cg10 form_row--center create_account--special380">
                             <label for="form_create_account">Хотите создать аккаунт</label>
-                            <input type="checkbox" name="create_account" id="form_create_account">
+                            <input type="checkbox" name="create_account" id="form_create_account" checked>
                         </div>
 
-                        <div class="account_data">
+                        <div class="account_data" id="account_form">
                             <div class="form_row">
                                 <div class="form_col form_col--flex">
                                     <label for="form_login">Задайте логин</label>
@@ -150,6 +150,10 @@
                                 <div class="form_col form_col--flex">
                                     <label for="form_password">Задайте пароль</label>
                                     <input type="password" name="password" id="form_password" class="form_input--h30">
+                                    <div>
+                                        <input type="checkbox" name="show_password" id="show_password">
+                                        <label for="show_password">Показать пароль</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>

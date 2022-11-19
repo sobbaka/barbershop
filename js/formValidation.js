@@ -8,6 +8,32 @@ const form = document.getElementById('form')
 
 const body = document.getElementById('body')
 
+const create_account = document.getElementById('form_create_account');
+
+const showPassword = document.getElementById('show_password');
+const password = document.getElementById('form_password');
+
+
+showPassword.addEventListener('click', function() {
+    if (showPassword.checked) {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+
+})
+
+
+
+create_account.addEventListener('click', function() {
+    const blockAccount = document.getElementById('account_form');
+    if (create_account.checked) {
+        blockAccount.style.display = "block";
+    } else {
+        blockAccount.style.display = 'none';
+    }
+
+})
 
 let pressedBtn = false;
 

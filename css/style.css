@@ -605,13 +605,12 @@ option {
     justify-content: center;
 }
 
-.account_data {
-    /* display: none; */
+.account_data,
+#account_form {
+    display: block;
 }
 
 input::file-selector-button {
-    /* font-weight: bold; */
-    /* padding: 0.5em; */
     height: 30px;
     border: transparent;
 }
