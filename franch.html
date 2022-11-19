@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body class="body__image">
+<body class="body__image" id="body">
     <header class="header">
         <div class="container">
             <nav class="navigation">
@@ -38,37 +38,36 @@
                 <li class="breadcrumbs__item non-active">ЗАЯВКА НА ФРАНШИЗУ</li>
             </ul>
             <div class="form_wrapper">
-                <form action="" method="post">
+                <form action="" method="post" id="form">
 
                     <div class="form_row">
                         <div class="form_col form_col--flex">
                             <label for="form_first_name">Ваше имя</label>
-                            <input type="text" name="first_name" id="form_first_name" required class="form_input--h30">
+                            <input type="text" name="first_name" id="form_first_name" required class="form_input--h30" placeholder="Иван">
                         </div>
                         <div class="form_col form_col--flex">
                             <label for="form_last_name">Ваша фамилия</label>
-                            <input type="text" name="last_name" id="form_last_name" required class="form_input--h30">
+                            <input type="text" name="last_name" id="form_last_name" required class="form_input--h30" placeholder="Иванов">
                         </div>
                     </div>
 
                     <div class="form_row">
                         <div class="form_col">
-                            <h3>Ваш пол</h3>
-
-                            <div class="option_wrapper">
-                                <div class="option_item">
-                                    <label for="sex_man">Мужчина</label>
-                                    <input type="radio" id="sex_man" name="sex" value="man">
+                            <fieldset>
+                                <legend>Ваш пол</legend>
+                                <div class="option_wrapper">
+                                    <div class="option_item">
+                                        <label for="sex_man">Мужчина</label>
+                                        <input type="radio" id="sex_man" name="sex" value="man">
+                                    </div>
+                                    <div class="option_item">
+                                        <label for="sex_woman">Женщина</label>
+                                        <input type="radio" id="sex_woman" name="sex" value="woman">
+                                    </div>
                                 </div>
-                                <div class="option_item">
-                                    <label for="sex_woman">Женщина</label>
-                                    <input type="radio" id="sex_woman" name="sex" value="woman">
-                                </div>
-                            </div>
-
-
-
+                            </fieldset>
                         </div>
+
                         <div class="form_col form_col--flex">
                             <label for="form_birth_date">Дата рождения</label>
                             <input type="date" name="birth_date" id="form_birth_date" class="form_input--h30">
@@ -78,11 +77,11 @@
                     <div class="form_row">
                         <div class="form_col form_col--flex">
                             <label for="form_phone">Номер телефона</label>
-                            <input type="tel" name="phone" id="form_phone" pattern="[0-9]" class="form_input--h30">
+                            <input type="tel" name="phone" id="form_phone" pattern="[0-9]{5}" class="form_input--h30" placeholder="8921555555">
                         </div>
                         <div class="form_col form_col--flex">
                             <label for="form_email">Ваш email</label>
-                            <input type="email" name="email" id="form_email" required class="form_input--h30">
+                            <input type="email" name="email" id="form_email" required class="form_input--h30" placeholder="ivanov@mail.com">
                         </div>
                     </div>
 
@@ -103,21 +102,23 @@
 
                         </div>
                         <div class="form_col">
-                            <h3>Что вы открываете</h3>
-                            <div class="option_wrapper store--special700">
-                                <div class="option_item">
-                                    <input type="checkbox" name="store_1" id="form_store_1" value="online">
-                                    <label for="form_store_1">Онлайн магазин</label>
+                            <fieldset>
+                                <legend>Что вы открываете</legend>
+                                <div class="option_wrapper store--special700">
+                                    <div class="option_item">
+                                        <input type="checkbox" name="store_1" id="form_store_1" value="online">
+                                        <label for="form_store_1">Онлайн магазин</label>
+                                    </div>
+                                    <div class="option_item">
+                                        <input type="checkbox" name="store_2" id="form_store_2" value="ofline-store">
+                                        <label for="form_store_2">Магазин</label>
+                                    </div>
+                                    <div class="option_item">
+                                        <input type="checkbox" name="store_3" id="form_store_3" value="barbershop">
+                                        <label for="form_store_3">Барбершоп</label>
+                                    </div>
                                 </div>
-                                <div class="option_item">
-                                    <input type="checkbox" name="store_2" id="form_store_2" value="ofline-store">
-                                    <label for="form_store_2">Магазин</label>
-                                </div>
-                                <div class="option_item">
-                                    <input type="checkbox" name="store_3" id="form_store_3" value="barbershop">
-                                    <label for="form_store_3">Барбершоп</label>
-                                </div>
-                            </div>
+                            </fieldset>
                         </div>
                     </div>
                     <div class="form_row ">
@@ -125,6 +126,13 @@
                             <label for="form_company_data">Загрузите ваши реквизиты</label>
                             <input type="file" name="company_data" id="form_company_data" class="form_input--h30 form_input--file">
                         </div>
+                    </div>
+
+                    <div class="form_row">
+                        <label for="form_comments">Дополнительная информация</label>
+                        <textarea name="comments" id="form_comments" rows="5" class="form_textarea">
+                            
+                        </textarea>
                     </div>
 
                     <div class="form_account_wrapper">
@@ -147,7 +155,8 @@
                         </div>
                     </div>
                     <div class="form_row form_row--center form--pb50">
-                        <button type="submit" class="black__btn ">Отправить</button>
+                        <button type="submit" class="black__btn" id="form_submit">
+                            Отправить</button>
                     </div>
 
                 </form>
@@ -184,6 +193,8 @@
         </div>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="/js/formValidation.js"></script>
+
 
 </body>
 
