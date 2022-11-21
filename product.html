@@ -89,6 +89,42 @@
             </div>
         </div>
     </main>
+    <div class="login">
+        <div class="login__wrapper">
+
+            <div class="login__close">
+                <button type="button" class="close__btn">
+                    <img src="/img/icons/close-square-line-icon.svg" alt="" class="close__img">
+                </button>
+            </div>
+
+            <form action="#" method="get" class="login__form form-active">
+                <fieldset class="login__fieldset">
+                    <legend class="login__legend">Вход в личный кабинет</legend>
+                    <label for="login__login" class="form__comment">Ваш логин</label>
+                    <input type="text" class="login__login" name="" id="" required>
+                    <label for="login__password" class="form__comment">Ваш пароль</label>
+                    <input type="password" class="login__password" name="" id="" required>
+                </fieldset>
+
+                <button type="submit" class="black__btn" id="login_submit">Enter account</button>
+            </form>
+
+            <form action="#" method="get" class="password__form">
+                <label for="password__email" class="password__legend">Восстановить пароль</label>
+                <span class="form__comment">Введите ваш email</span>
+                <input type="email" class="password__email" name="password__email" id="password__email" required>
+
+                <button type="submit" class="black__btn" id="password__submit">Restore password</button>
+
+            </form>
+
+            <a href="#" class="modal__switcher">Забыли пароль?</a>
+
+
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__row">
@@ -113,6 +149,7 @@
         </div>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 
 </html>
