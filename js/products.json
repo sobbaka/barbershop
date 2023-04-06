@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"title": "Baxter of california",
+    "subtitle": "Набор для путешествий",
+		"price": 1500,
+		"imgSrc": "product_big.jpg"
+	},
+	{
+		"id": 2,
+		"title": "Malin+goetz",
+    "subtitle": "Кейс для принадлежностей",
+		"price": 200,
+		"imgSrc": "case-pro.jpg"
+	},
+	{
+		"id": 3,
+		"title": "Mr natty",
+    "subtitle": "Средство для ухода",
+		"price": 300,
+		"imgSrc": "cream.jpg"
+	},
+	{
+		"id": 4,
+		"title": "American crew",
+    "subtitle": "Набор машинок",
+		"price": 3400,
+		"imgSrc": "shave-rebel.jpg"
+	},
+	{
+		"id": 5,
+		"title": "Suavecito",
+    "subtitle": "Средство ухода",
+		"price": 300,
+		"imgSrc": "treatment-max.jpg"
+	},
+	{
+		"id": 6,
+		"title": "Murray's",
+    "subtitle": "Набор триммеров",
+		"price": 2300,
+		"imgSrc": "trimm-pro.jpg"
+	}
+]
