@@ -19,9 +19,7 @@ body {
   background-image: url(/img/backgrounds/pattern-bg.jpg);
 }
 
-.hidden {
-  display: none;
-}
+
 
 .container-cart {
   display: flex;
@@ -42,15 +40,13 @@ body {
 }
 
 
-
-
 .modal-product {
   display: flex;
   gap: 14px;
   padding-bottom: 8px;
 }
 
-modal-product__button {
+.modal-product__button {
   color: #ffffff;
   font-weight: bold;
   background-color: #000000;
@@ -1213,4 +1209,8 @@ input[type="email"] {
     flex-wrap: nowrap;
     flex-direction: row;
   }
+}
+
+.hidden {
+  display: none;
 }
