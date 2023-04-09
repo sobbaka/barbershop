@@ -3,6 +3,8 @@ export default class View {
     productsContainer: document.querySelector(".products__row")
   }
 
+  productsPath = ["/store.html"]
+
   renderProducts(productsArray) {
     productsArray.forEach((item) => {
       console.log(item);

@@ -8,13 +8,23 @@ const productView = new ProductView();
 
 const cartModalView = new CartModalView();
 
+const path = window.location.pathname;
+
+
+
 async function getAndRender() {
   await productsModel.loadProducts();
   //console.log(productsModel.products);
   productView.renderProducts(productsModel.products);
 }
 
-//getAndRender();
+
+
+if (productView.productsPath.includes(path)) {
+  getAndRender();
+}
+
+
 
 cartModalView.elements.cartLink.addEventListener("click", (e) => {
   cartModalView.showCartModal();
