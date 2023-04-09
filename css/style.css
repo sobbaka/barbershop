@@ -19,8 +19,6 @@ body {
   background-image: url(/img/backgrounds/pattern-bg.jpg);
 }
 
-
-
 .container-cart {
   display: flex;
   justify-content: flex-end;
@@ -38,7 +36,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 
 .modal-product {
   display: flex;
@@ -82,6 +79,10 @@ body {
 .container {
   max-width: 940px;
   margin: 0 auto;
+}
+
+.main-content {
+  min-height: 70vh;
 }
 
 .navigation {
@@ -144,17 +145,6 @@ body {
 .cart__icon {
   width: 32px;
 }
-
-/* footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 64px;
-    flex-direction: row;
-    align-items: flex-start;
-    align-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 27px;
-} */
 
 .hamburger {
   display: none;
@@ -831,6 +821,107 @@ input[type="email"] {
 
 .form-active {
   display: flex;
+}
+
+.basket {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 40px;
+}
+
+.product-card {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+}
+
+.basket__product-list {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.product-card__picture {
+  width: 100px;
+  height: 100px;
+
+}
+
+.product-card__title {
+  font-size: 25px;
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card__quantity {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.product-card__control {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: rgb(238, 182, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22%;
+  cursor: pointer;
+}
+
+.product-card__control:hover {
+  background-color: rgb(255, 190, 69);
+}
+
+.product-card__total {
+  display: block;
+}
+
+.product-card__delete-btn {
+  padding-right: 20px;
+}
+
+.product-card__delete-icon {
+  width: 25px;
+}
+
+.checkout {
+  padding: 20px 50px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.checkout__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout__fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout__input:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.checkout__title {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.checkout__price {
+  padding-bottom: 10px;
 }
 
 @media (max-width: 939px) {
