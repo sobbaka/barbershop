@@ -7,7 +7,6 @@ export default class View {
 
   renderProducts(productsArray) {
     productsArray.forEach((item) => {
-      console.log(item);
       const productHTML = `<div class="card" data-id="${item.id}">
                             <div class="card__picture">
                               <img src="/img/products/${item.imgSrc}" alt="${item.title}" class="card__img">
@@ -20,7 +19,7 @@ export default class View {
                                 </h2>
                                 <div class="card__order">
                                     <span class="product__price card__price">${item.price} ₽</span>
-                                    <button class="card__btn">КУПИТЬ</button>
+                                    <button class="card__btn" data-action="add-to-cart">КУПИТЬ</button>
                                 </div>
                             </div>
                           </div>
