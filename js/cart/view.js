@@ -2,6 +2,7 @@ export default class View {
   elements = {
     cartLink: document.querySelector(".cart__link"),
     cartModal: document.querySelector(".modal-cart"),
+    cartModalWrapper: document.querySelector(".modal-cart__wrapper"),
     productsWrapper: document.querySelector("#products-wrapper"),
   }
 
@@ -20,5 +21,36 @@ export default class View {
   hideCartIcon() {
     this.elements.cartLink.classList.add("hidden");
   }
+
+  renderProductsInModal(products) {
+
+    let items = [];
+    products.forEach(item => {
+      let itemTotalPrice = item.price * item.counter;
+      let html = `
+      <div class="modal-product">
+      <div class="modal-product__picture">
+        <img src="./img/products/${item.imgSrc}" alt="${item.title} - ${item.subtitle}" class="modal-product__image">
+      </div>
+      <div class="modal-product__info">
+        <p class="modal-product__name">
+          ${item.subtitle}<br>
+          ${item.title}
+        </p>
+        <span class="modal-product__price">${itemTotalPrice} ₽ - ${item.counter} шт.</span>
+      </div>
+    </div>
+      `
+      items.push(html);
+    })
+
+    // let link = `<a href="/cart.html" class="modal-product__button">В корзину</a>`;
+    // items.push(link)
+    let result = items.join("");
+
+    this.elements.cartModalWrapper.innerHTML = result;
+
+  }
+
 
 }
