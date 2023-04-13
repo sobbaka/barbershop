@@ -1,6 +1,16 @@
 export default class Model {
   constructor() {
     this.cart = [];
+    this.loadFromLocalStorage();
+  }
+
+  saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(this.cart))
+  }
+
+  loadFromLocalStorage() {
+    let data = localStorage.getItem('cart');
+    this.cart = data ? JSON.parse(data) : this.cart;
   }
 
   addToCart(product) {
@@ -12,6 +22,8 @@ export default class Model {
       const newProduct = JSON.parse(JSON.stringify(product));
       this.cart.push(newProduct);
     }
+
+    this.saveCartToLocalStorage();
   }
 
   getTotalPrice() {
