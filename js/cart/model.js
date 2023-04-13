@@ -33,6 +33,13 @@ export default class Model {
     return total;
   }
 
+  getTotalProducts() {
+    const total = this.cart.reduce((total, product) => {
+      return total + product.counter;
+    }, 0)
+    return total;
+  }
+
   getProduct(id) {
     return this.cart.find((item) => item.id === id);
   }
