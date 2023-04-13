@@ -2,155 +2,181 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Price List</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="/img/barber.ico" rel="icon" />
+  <title>Price List</title>
 </head>
 
 <body class="body__image">
-    <header class="header">
-        <div class="container">
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="/index.html" class="navigation__link"><img src="/img/icons/logo-small.svg" alt=""></a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">ИНФОРМАЦИЯ</a></li>
-                    <li class="navigation__item"><a href="/price.html" class="navigation__link">ПРАЙС-ЛИСТ</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">НОВОСТИ</a></li>
-                    <li class="navigation__item"><a href="/store.html" class="navigation__link">МАГАЗИН</a></li>
-                    <li class="navigation__item"><a href="/product.html" class="navigation__link">КОНТАКТЫ</a></li>
-                </ul>
-                <a href="#" class="navigation__link navigation__enter">ВХОД</a>
-                <button class="hamburger">
-                    <div class="bar"></div>
-                </button>
-            </nav>
+  <header class="header">
+    <div class="container">
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="/index.html" class="navigation__link"><img src="/img/icons/logo-small.svg" alt=""></a>
+          </li>
+          <li class="navigation__item"><a href="#" class="navigation__link">ИНФОРМАЦИЯ</a></li>
+          <li class="navigation__item"><a href="/price.html" class="navigation__link">ПРАЙС-ЛИСТ</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">НОВОСТИ</a></li>
+          <li class="navigation__item"><a href="/store.html" class="navigation__link">МАГАЗИН</a></li>
+          <li class="navigation__item"><a href="/product.html" class="navigation__link">КОНТАКТЫ</a></li>
+        </ul>
+        <div class="navigation__account">
+          <a href="#" class="cart__link hidden">
+            <span class="cart__number">10</span>
+            <img src="./img/icons/cart.png" alt="" class="cart__icon">
+          </a>
+          <div class="modal-cart hidden">
+            <div class="modal-cart__wrapper"></div>
+            <a href="/cart.html" class="modal-product__button">В корзину</a>
+          </div>
+          <a href="#" class="navigation__link navigation__enter">ВХОД</a>
         </div>
-    </header>
-    <main>
-        <div class="container container--side_padding">
-            <h1 class="inner__title">
-                ПРАЙС-ЛИСТ
-            </h1>
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">ГЛАВНАЯ</a></li>
-                <li class="breadcrumbs__item non-active">ПРАЙС-ЛИСТ</li>
-            </ul>
-            <h2 class="pricelist__header">ИСТИННО МУЖСКАЯ КЛАССИКА</h2>
-            <div class="pricelist_row">
-                <div class="pricelist_column">
-                    <h3 class="title pricelist__title-small">МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
-                    <ul class="pricelist__brands">
-                        <li class="pricelist__brands-item">Baxter of California</li>
-                        <li class="pricelist__brands-item">Mr Natty</li>
-                        <li class="pricelist__brands-item">Suavecito</li>
-                        <li class="pricelist__brands-item">Malin+Goetz</li>
-                    </ul>
-
-                </div>
-                <div class="pricelist_column">
-                    <h3 class="title">ЦЕНЫ НА УСЛУГИ НАШИХ МАСТЕРОВ:</h3>
-
-                    <table class="pricelist__table">
-                        <tr class="pricelist__table-row">
-                            <td class="pricelist__table-name">СТРИЖКА</td>
-                            <td class="pricelist__table-price">1500 ₽</td>
-                        </tr>
-                        <tr class="pricelist__table-row">
-                            <td class="pricelist__table-name">СТРИЖКА БОРОДЫ</td>
-                            <td class="pricelist__table-price">500 ₽</td>
-                        </tr>
-                        <tr class="pricelist__table-row">
-                            <td class="pricelist__table-name">НАКРУТКА УСОВ</td>
-                            <td class="pricelist__table-price">350 ₽</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class="align--center">
-                <div class="pricelist__text-row">
-                    <h3 class="title pricelist__title--about">НЕСКОЛЬКО СЛОВ О НАС:</h3>
-                    <div class="pricelist_row pricelist__row--about">
-                        <div class="pricelist_column">
-                            <p class="pricelist__text">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
-                        </div>
-                        <div class="pricelist_column">
-                            <p class="pricelist__text">
-                                Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </main>
-    <div class="login">
-        <div class="login__wrapper">
-
-            <div class="login__close">
-                <button type="button" class="close__btn">
-                    <img src="/img/icons/close-square-line-icon.svg" alt="" class="close__img">
-                </button>
-            </div>
-
-            <form action="#" method="get" class="login__form form-active">
-                <fieldset class="login__fieldset">
-                    <legend class="login__legend">Вход в личный кабинет</legend>
-                    <label for="login__login" class="form__comment">Ваш логин</label>
-                    <input type="text" class="login__login" name="" id="" required>
-                    <label for="login__password" class="form__comment">Ваш пароль</label>
-                    <input type="password" class="login__password" name="" id="" required>
-                </fieldset>
-
-                <button type="submit" class="black__btn" id="login_submit">Enter account</button>
-            </form>
-
-            <form action="#" method="get" class="password__form">
-                <label for="password__email" class="password__legend">Восстановить пароль</label>
-                <span class="form__comment">Введите ваш email</span>
-                <input type="email" class="password__email" name="password__email" id="password__email" required>
-
-                <button type="submit" class="black__btn" id="password__submit">Restore password</button>
-
-            </form>
-
-            <a href="#" class="modal__switcher">Забыли пароль?</a>
-
-
-        </div>
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+      </nav>
     </div>
+  </header>
+  <main>
+    <div class="container container--side_padding">
+      <h1 class="inner__title">
+        ПРАЙС-ЛИСТ
+      </h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">ГЛАВНАЯ</a></li>
+        <li class="breadcrumbs__item non-active">ПРАЙС-ЛИСТ</li>
+      </ul>
+      <h2 class="pricelist__header">ИСТИННО МУЖСКАЯ КЛАССИКА</h2>
+      <div class="pricelist_row">
+        <div class="pricelist_column">
+          <h3 class="title pricelist__title-small">МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
+          <ul class="pricelist__brands">
+            <li class="pricelist__brands-item">Baxter of California</li>
+            <li class="pricelist__brands-item">Mr Natty</li>
+            <li class="pricelist__brands-item">Suavecito</li>
+            <li class="pricelist__brands-item">Malin+Goetz</li>
+          </ul>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__row">
-                <div class="footer__column">
-                    <p class="footer__text">
-                        БАРБЕРШОП «БОРОДИНСКИЙ»<br> КАК НАС НАЙТИ?<br> АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br> ТЕЛЕФОН: +7 (495) 666-02-66
-                    </p>
-                </div>
-                <div class="footer__column">
-                    <h4 class="footer__title">ДАВАЙТЕ ДРУЖИТЬ!</h4>
-                    <div class="footer__social">
-                        <a href="#" class="social__link"><img src="/img/icons/social/vk.svg" alt="" class="social__img social__vk"></a>
-                        <a href="#" class="social__link"><img src="/img/icons/social/instagram.svg" alt="" class="social__img social__instagram"></a>
-                        <a href="#" class="social__link"><img src="/img/icons/social/facebook.svg" alt="" class="social__img social__facebook"></a>
-                    </div>
-                </div>
-                <div class="footer__column">
-                    <h4 class="footer__title">РАЗРАБОТАНО:</h4>
-                    <a href="#" class="black__btn">Я сделялЪ</a>
-                </div>
-            </div>
         </div>
-    </footer>
-    <script src="/js/main.js"></script>
-    <script src="/js/login.js"></script>
+        <div class="pricelist_column">
+          <h3 class="title">ЦЕНЫ НА УСЛУГИ НАШИХ МАСТЕРОВ:</h3>
+
+          <table class="pricelist__table">
+            <tr class="pricelist__table-row">
+              <td class="pricelist__table-name">СТРИЖКА</td>
+              <td class="pricelist__table-price">1500 ₽</td>
+            </tr>
+            <tr class="pricelist__table-row">
+              <td class="pricelist__table-name">СТРИЖКА БОРОДЫ</td>
+              <td class="pricelist__table-price">500 ₽</td>
+            </tr>
+            <tr class="pricelist__table-row">
+              <td class="pricelist__table-name">НАКРУТКА УСОВ</td>
+              <td class="pricelist__table-price">350 ₽</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="align--center">
+        <div class="pricelist__text-row">
+          <h3 class="title pricelist__title--about">НЕСКОЛЬКО СЛОВ О НАС:</h3>
+          <div class="pricelist_row pricelist__row--about">
+            <div class="pricelist_column">
+              <p class="pricelist__text">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка
+                каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество,
+                мы делаем качество.</p>
+            </div>
+            <div class="pricelist_column">
+              <p class="pricelist__text">
+                Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже
+                в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно
+                и свободно!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+  <div class="login">
+    <div class="login__wrapper">
+
+      <div class="login__close">
+        <button type="button" class="close__btn">
+          <img src="/img/icons/close-square-line-icon.svg" alt="" class="close__img">
+        </button>
+      </div>
+
+      <form action="#" method="get" class="login__form form-active">
+        <fieldset class="login__fieldset">
+          <legend class="login__legend">Вход в личный кабинет</legend>
+          <label for="login__login" class="form__comment">Ваш логин</label>
+          <input type="text" class="login__login" name="" id="" required>
+          <label for="login__password" class="form__comment">Ваш пароль</label>
+          <input type="password" class="login__password" name="" id="" required>
+        </fieldset>
+
+        <button type="submit" class="black__btn" id="login_submit">Enter account</button>
+      </form>
+
+      <form action="#" method="get" class="password__form">
+        <label for="password__email" class="password__legend">Восстановить пароль</label>
+        <span class="form__comment">Введите ваш email</span>
+        <input type="email" class="password__email" name="password__email" id="password__email" required>
+
+        <button type="submit" class="black__btn" id="password__submit">Restore password</button>
+
+      </form>
+
+      <a href="#" class="modal__switcher">Забыли пароль?</a>
+
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__column">
+          <p class="footer__text">
+            БАРБЕРШОП «БОРОДИНСКИЙ»<br> КАК НАС НАЙТИ?<br> АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+            ТЕЛЕФОН: +7 (495) 666-02-66
+          </p>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title">ДАВАЙТЕ ДРУЖИТЬ!</h4>
+          <div class="footer__social">
+            <a href="#" class="social__link"><img src="/img/icons/social/vk.svg" alt=""
+                class="social__img social__vk"></a>
+            <a href="#" class="social__link"><img src="/img/icons/social/instagram.svg" alt=""
+                class="social__img social__instagram"></a>
+            <a href="#" class="social__link"><img src="/img/icons/social/facebook.svg" alt=""
+                class="social__img social__facebook"></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title">РАЗРАБОТАНО:</h4>
+          <a href="#" class="black__btn">Я сделялЪ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script src="/js/login.js"></script>
+
+  <!-- Управление продуктами -->
+  <script src="./js/product/view.js" type="module"></script>
+  <script src="./js/product/model.js" type="module"></script>
+
+  <!-- Основной скрипт -->
+  <script src="./js/controller.js" type="module"></script>
 </body>
 
 </html>
