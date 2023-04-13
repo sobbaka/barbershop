@@ -3,6 +3,7 @@ export default class View {
     cartLink: document.querySelector(".cart__link"),
     cartModal: document.querySelector(".modal-cart"),
     cartModalWrapper: document.querySelector(".modal-cart__wrapper"),
+    cartProductsNumber: document.querySelector(".cart__number"),
     productsWrapper: document.querySelector("#products-wrapper"),
   }
 
@@ -14,8 +15,9 @@ export default class View {
     this.elements.cartModal.classList.add("hidden");
   }
 
-  showCartIcon() {
+  showCartIcon(totalProducts) {
     this.elements.cartLink.classList.remove("hidden");
+    this.elements.cartProductsNumber.innerHTML = totalProducts;
   }
 
   hideCartIcon() {
