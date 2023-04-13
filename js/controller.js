@@ -19,6 +19,13 @@ async function getAndRender() {
   productView.renderProducts(productModel.products);
 }
 
+
+if (cartModel.cart.length) {
+  cartModalView.showCartIcon(cartModel.getTotalProducts());
+  cartModalView.renderProductsInModal(cartModel.cart);
+};
+
+
 if (productView.productsPath.includes(path)) {
   getAndRender();
 
@@ -38,14 +45,13 @@ if (productView.productsPath.includes(path)) {
       if (cartModalView.elements.cartLink.classList.contains("hidden")) {
         cartModalView.elements.cartLink.classList.remove("hidden");
       }
+
+      cartModalView.renderProductsInModal(cartModel.cart);
+      cartModalView.showCartIcon(cartModel.getTotalProducts());
     }
 
   })
 }
-
-
-
-
 
 
 cartModalView.elements.cartLink.addEventListener("click", (e) => {
