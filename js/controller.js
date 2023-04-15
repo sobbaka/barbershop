@@ -2,13 +2,15 @@ import ProductModel from "./product/model.js";
 import ProductView from "./product/view.js";
 
 import CartModel from "./cart/model.js";
-import CartModalView from "./cart/view.js";
+import CartModalView from "./cart/cartModalView.js";
+import BasketView from "./cart/basketView.js";
 
 const productModel = new ProductModel();
 const productView = new ProductView();
 
 const cartModel = new CartModel();
 const cartModalView = new CartModalView();
+const basketView = new BasketView();
 
 const path = window.location.pathname;
 
@@ -20,9 +22,22 @@ async function getAndRender() {
 }
 
 
-if (cartModel.cart.length) {
+if (cartModel.cart.length && !basketView.elements.basketPath.includes(path)) {
   cartModalView.showCartIcon(cartModel.getTotalProducts());
   cartModalView.renderProductsInModal(cartModel.cart);
+
+  cartModalView.elements.cartLink.addEventListener("click", (e) => {
+    cartModalView.showCartModal();
+  })
+
+  cartModalView.elements.cartModal.addEventListener("mouseover", (e) => {
+    cartModalView.showCartModal();
+  })
+
+  cartModalView.elements.cartModal.addEventListener("mouseout", (e) => {
+    cartModalView.hideCartModal();
+  })
+
 };
 
 
@@ -54,14 +69,14 @@ if (productView.productsPath.includes(path)) {
 }
 
 
-cartModalView.elements.cartLink.addEventListener("click", (e) => {
-  cartModalView.showCartModal();
-})
 
-cartModalView.elements.cartModal.addEventListener("mouseover", (e) => {
-  cartModalView.showCartModal();
-})
 
-cartModalView.elements.cartModal.addEventListener("mouseout", (e) => {
-  cartModalView.hideCartModal();
-})
+
+if (basketView.elements.basketPath.includes(path)) {
+  basketView.renderBasketTotalProducts(cartModel.getTotalProducts());
+  basketView.renderBasketTotalPrice(cartModel.getTotalPrice());
+
+  basketView.renderProducts(cartModel.cart)
+
+
+}

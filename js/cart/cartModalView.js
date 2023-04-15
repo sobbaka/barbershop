@@ -46,13 +46,9 @@ export default class View {
       items.push(html);
     })
 
-    // let link = `<a href="/cart.html" class="modal-product__button">В корзину</a>`;
-    // items.push(link)
     let result = items.join("");
 
     this.elements.cartModalWrapper.innerHTML = result;
-
   }
-
 
 }
