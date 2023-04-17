@@ -42,9 +42,11 @@ body {
 }
 
 .modal-product {
+  width: 100%;
   display: flex;
   gap: 14px;
-  padding-bottom: 8px;
+  padding: 8px 0px;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .modal-product__button {
@@ -56,12 +58,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 48px;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 
-.modal-product:not(:last-child) {
+/* .modal-product:not(:last-child) {
   border-bottom: 1px solid #dfdfdf;
-}
+} */
 
 .modal-product__picture {
   width: 100px;
