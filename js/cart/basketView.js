@@ -37,13 +37,19 @@ export default class View {
       let itemTotalPrice = item.price * item.counter;
       let html = `
       <div class="basket__product product-card" data-id="${item.id}">
+
+
       <div class="product-card__picture">
         <img src="./img/products/${item.imgSrc}" alt="${item.title} - ${item.subtitle}" class="product-card__img">
       </div>
+
+
+      <div class="product-card__row">
       <div class="product-card__description">
         <p class="product-card__title">${item.title}</p>
         <p class="product-card__subtext">${item.subtitle}</p>
       </div>
+      <div class="product-card__column">
       <div class="product-card__info">
         <span class="product-card__price">${item.price} ₽ / ${itemTotalPrice} ₽</span>
         <div class="product-card__quantity">
@@ -55,6 +61,9 @@ export default class View {
       <button type="button" class="product-card__delete-btn" data-action="delete">
         <img src="./img/icons/delete-button.svg" alt="" class="product-card__delete-icon">
       </button>
+
+      </div>
+      </div>
     </div>
       `
       items.push(html);
