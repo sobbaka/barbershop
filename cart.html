@@ -113,15 +113,22 @@
 
           <form action="POST" class="checkout__form form">
             <fieldset class="checkout__fieldset">
-              <label for="checkout__name">Ваше имя</label>
-              <input type="text" class="checkout__input form__input" placeholder="" required id="checkout__name">
 
+              <div class="input__wrapper">
+                <label for="checkout__name" class="checkout__label">Ваше имя</label>
+                <input type="text" class="checkout__input form__input" placeholder="" required id="checkout__name">
+              </div>
 
-              <label for="checkout__phone">Номер телефона</label>
-              <input type="tel" class="checkout__input form__input" placeholder="" required id="checkout__phone">
+              <div class="input__wrapper">
+                <label for="checkout__phone" class="checkout__label">Номер телефона</label>
+                <input type="tel" class="checkout__input form__input" placeholder="" required id="checkout__phone">
+              </div>
 
-              <label for="checkout__email">Ваш e-mail</label>
-              <input type="email" class="checkout__input form__input" placeholder="" required id="checkout__email">
+              <div class="input__wrapper">
+                <label for="checkout__email" class="checkout__label">Ваш e-mail</label>
+                <input type="email" class="checkout__input form__input" placeholder="" required id="checkout__email">
+              </div>
+
             </fieldset>
             <button type="submit" class="checkout__submit form__btn black__btn">Заказать</button>
           </form>
