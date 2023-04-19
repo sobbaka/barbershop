@@ -18,6 +18,11 @@ export default class View {
   showCartIcon(totalProducts) {
     this.elements.cartLink.classList.remove("hidden");
     this.elements.cartProductsNumber.innerHTML = totalProducts;
+    if (totalProducts > 9) {
+      this.elements.cartProductsNumber.classList.add("cart__number__over_ten")
+    } else {
+      this.elements.cartProductsNumber.classList.remove("cart__number__over_ten")
+    }
   }
 
   hideCartIcon() {
