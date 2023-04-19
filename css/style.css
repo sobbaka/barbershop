@@ -148,6 +148,10 @@ body {
   border-radius: 50%;
 }
 
+.cart__number__over_ten {
+  padding: 0px 4px;
+}
+
 .cart__icon {
   width: 32px;
 }
@@ -958,6 +962,11 @@ input[type="email"] {
 }
 
 @media (max-width: 939px) {
+
+  .navigation__link {
+    font-size: 14px;
+  }
+
   .container--side_padding {
     padding: 0 10px;
   }
@@ -981,7 +990,7 @@ input[type="email"] {
   .enroll {
     flex-grow: 1;
     max-width: 419px;
-    padding: 45px 45px 20px 45px;
+    padding: 45px 25px 20px 25px;
   }
 
   .news__btn,
@@ -1034,6 +1043,10 @@ input[type="email"] {
   .navigation__list,
   .navigation__enter {
     display: none;
+  }
+
+  .navigation__account {
+    padding-right: 15px;
   }
 
   .navigation.is-active {
@@ -1156,6 +1169,10 @@ input[type="email"] {
 
   .basket__product-list {
     width: 100%;
+  }
+
+  .modal-cart {
+    right: -54px;
   }
 
 }
@@ -1367,6 +1384,7 @@ input[type="email"] {
 
     padding-right: 35px;
     width: 148px;
+    align-items: flex-start;
   }
 
 }
