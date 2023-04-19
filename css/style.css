@@ -16,7 +16,7 @@ body {
 }
 
 .body__image {
-  background-image: url(/img/backgrounds/pattern-bg.jpg);
+  background-image: url("../img/backgrounds/pattern-bg.jpg");
 }
 
 .container-cart {
@@ -791,7 +791,7 @@ input[type="email"] {
 .login__wrapper {
   max-width: 500px;
   margin: 0 auto;
-  background-image: url(/img/backgrounds/pattern-bg.jpg);
+  background-image: url("../img/backgrounds/pattern-bg.jpg");
   padding: 45px;
   position: relative;
 }
