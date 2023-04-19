@@ -95,7 +95,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 20px;
+  padding: 29px 20px 25px;
+}
+
+.navigation__state__has-cart {
+  padding: 21px 20px;
 }
 
 .navigation__list {
@@ -432,6 +436,8 @@ body {
   font-weight: bold;
   background-color: #e5e5e5;
   margin-right: -6px;
+  display: inline-block;
+  padding: 14px 43px;
 }
 
 .pricelist__brands li,
@@ -604,10 +610,13 @@ body {
 
 .card__price {
   display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  background-color: #e5e5e5;
+  margin-right: -6px;
   width: 50%;
   height: 30px;
   padding-top: 3px;
-  text-align: center;
 }
 
 .name__uppercase {
@@ -1385,6 +1394,12 @@ input[type="email"] {
     padding-right: 35px;
     width: 148px;
     align-items: flex-start;
+  }
+
+  .product__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 }

@@ -5,9 +5,11 @@ export default class View {
     cartModalWrapper: document.querySelector(".modal-cart__wrapper"),
     cartProductsNumber: document.querySelector(".cart__number"),
     productsWrapper: document.querySelector("#products-wrapper"),
+    navigation: document.querySelector(".navigation"),
   }
 
   showCartModal() {
+
     this.elements.cartModal.classList.remove("hidden");
   }
 
@@ -23,10 +25,12 @@ export default class View {
     } else {
       this.elements.cartProductsNumber.classList.remove("cart__number__over_ten")
     }
+    this.elements.navigation.classList.add("navigation__state__has-cart");
   }
 
   hideCartIcon() {
     this.elements.cartLink.classList.add("hidden");
+    this.elements.navigation.classList.remove("navigation__state__has-cart");
   }
 
   renderProductsInModal(products) {
