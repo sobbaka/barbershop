@@ -1,9 +1,18 @@
-window.onload = function() {
-    const menu = document.querySelector('.navigation')
-    const btn = document.querySelector('.hamburger')
+// window.onload = function () {
+//   const menu = document.querySelector('.navigation')
+//   const btn = document.querySelector('.hamburger')
 
-    btn.onclick = () => {
-        menu.classList.toggle('is-active')
-        btn.classList.toggle('is-active')
-    }
-}
+//   btn.onclick = () => {
+//     menu.classList.toggle('is-active')
+//     btn.classList.toggle('is-active')
+//   }
+// }
+
+
+const menu = document.querySelector('.navigation')
+const btn = document.querySelector('.hamburger')
+
+btn.addEventListener("click", (e) => {
+  menu.classList.toggle('is-active')
+  btn.classList.toggle('is-active')
+})
