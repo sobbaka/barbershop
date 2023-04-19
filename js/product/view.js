@@ -18,7 +18,7 @@ export default class View {
                                 «${item.title}»
                                 </h2>
                                 <div class="card__order">
-                                    <span class="product__price card__price">${item.price} ₽</span>
+                                    <span class="card__price">${item.price} ₽</span>
                                     <button class="card__btn" data-action="add-to-cart">КУПИТЬ</button>
                                 </div>
                             </div>
