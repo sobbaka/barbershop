@@ -12,7 +12,8 @@ const cartModel = new CartModel();
 const cartModalView = new CartModalView();
 const basketView = new BasketView();
 
-const path = window.location.pathname;
+let path = window.location.pathname;
+path = path.replace('/barbershop', '');
 
 async function getAndRender() {
   await productModel.loadProducts();
