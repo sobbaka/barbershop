@@ -40,6 +40,7 @@ if (cartModel.cart.length && !basketView.elements.basketPath.includes(path)) {
 
 
 if (productView.productsPath.includes(path)) {
+  alert('Products')
   getAndRender();
 
   cartModalView.elements.productsWrapper.addEventListener("click", (e) => {
