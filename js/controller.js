@@ -5,12 +5,16 @@ import CartModel from "./cart/model.js";
 import CartModalView from "./cart/cartModalView.js";
 import BasketView from "./cart/basketView.js";
 
+import MenuView from "./menu/menuView.js";
+
 const productModel = new ProductModel();
 const productView = new ProductView();
 
 const cartModel = new CartModel();
 const cartModalView = new CartModalView();
 const basketView = new BasketView();
+
+const menuView = new MenuView();
 
 let path = window.location.pathname;
 path = path.replace('/barbershop', '');
@@ -21,12 +25,29 @@ async function getAndRender() {
 }
 
 
+menuView.elements.button.addEventListener("click", (e) => {
+  if (!cartModalView.checkCartModalState()) cartModalView.hideCartModal();
+  menuView.changeState();
+})
+
+
 if (cartModel.cart.length && !basketView.elements.basketPath.includes(path)) {
   cartModalView.showCartIcon(cartModel.getTotalProducts());
   cartModalView.renderProductsInModal(cartModel.cart);
 
+
+  // Блок кода повторяется
+
   cartModalView.elements.cartLink.addEventListener("click", (e) => {
-    cartModalView.showCartModal();
+
+    if (cartModalView.checkCartModalState()) {
+      cartModalView.showCartModal();
+      if (menuView.isActive()) menuView.changeState();
+
+    } else {
+      cartModalView.hideCartModal();
+    }
+
   })
 
   cartModalView.elements.cartModal.addEventListener("mouseover", (e) => {
@@ -54,7 +75,6 @@ if (productView.productsPath.includes(path)) {
       const product = productModel.getProduct(productId);
       cartModel.addToCart(product);
 
-      console.log(cartModel.cart)
 
       if (cartModalView.elements.cartLink.classList.contains("hidden")) {
         cartModalView.elements.cartLink.classList.remove("hidden");
@@ -62,6 +82,34 @@ if (productView.productsPath.includes(path)) {
 
       cartModalView.renderProductsInModal(cartModel.cart);
       cartModalView.showCartIcon(cartModel.getTotalProducts());
+
+
+
+      // Блок кода повторяется
+
+      cartModalView.elements.cartLink.addEventListener("click", (e) => {
+
+        if (cartModalView.checkCartModalState()) {
+          cartModalView.showCartModal();
+          if (menuView.isActive()) menuView.changeState();
+
+        } else {
+          cartModalView.hideCartModal();
+        }
+
+      })
+
+      cartModalView.elements.cartModal.addEventListener("mouseover", (e) => {
+        cartModalView.showCartModal();
+      })
+
+      cartModalView.elements.cartModal.addEventListener("mouseout", (e) => {
+        cartModalView.hideCartModal();
+      })
+
+
+
+
     }
 
   })
@@ -74,8 +122,6 @@ if (productView.productsPath.includes(path)) {
 if (basketView.elements.basketPath.includes(path)) {
   basketView.renderBasketTotalProducts(cartModel.getTotalProducts());
   basketView.renderBasketTotalPrice(cartModel.getTotalPrice());
-
   basketView.renderProducts(cartModel.cart)
-
 
 }

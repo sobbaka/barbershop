@@ -9,12 +9,15 @@ export default class View {
   }
 
   showCartModal() {
-
     this.elements.cartModal.classList.remove("hidden");
   }
 
   hideCartModal() {
     this.elements.cartModal.classList.add("hidden");
+  }
+
+  checkCartModalState() {
+    return this.elements.cartModal.classList.contains("hidden");
   }
 
   showCartIcon(totalProducts) {
