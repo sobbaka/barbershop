@@ -14,8 +14,6 @@ const basketView = new BasketView();
 
 const path = window.location.pathname;
 
-alert("test");
-
 async function getAndRender() {
   await productModel.loadProducts();
   productView.renderProducts(productModel.products);
