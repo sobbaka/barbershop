@@ -116,12 +116,8 @@ if (productView.productsPath.includes(path)) {
 }
 
 
-
-
-
 if (basketView.elements.basketPath.includes(path)) {
   basketView.renderBasketTotalProducts(cartModel.getTotalProducts());
   basketView.renderBasketTotalPrice(cartModel.getTotalPrice());
   basketView.renderProducts(cartModel.cart)
-
 }
