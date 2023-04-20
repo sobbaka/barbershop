@@ -9,7 +9,7 @@ export default class View {
     productsArray.forEach((item) => {
       const productHTML = `<div class="card" data-id="${item.id}">
                             <div class="card__picture">
-                              <img src="/img/products/${item.imgSrc}" alt="${item.title}" class="card__img">
+                              <img src="./img/products/${item.imgSrc}" alt="${item.title}" class="card__img">
                             </div>
                             <div class="card_info">
                                 <h2 class="card__name">
