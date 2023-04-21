@@ -120,4 +120,35 @@ if (basketView.elements.basketPath.includes(path)) {
   basketView.renderBasketTotalProducts(cartModel.getTotalProducts());
   basketView.renderBasketTotalPrice(cartModel.getTotalPrice());
   basketView.renderProducts(cartModel.cart)
+
+  basketView.elements.basketWrapper.addEventListener("click", (e) => {
+
+    let action = e.target.dataset.action;
+    const productId = +e.target.closest(".basket__product").dataset.id;
+
+    if (action === "plus") {
+      const product = cartModel.updateCounter(productId, action);
+
+      basketView.updateCounter(product);
+
+      basketView.renderBasketTotalProducts(cartModel.getTotalProducts());
+      basketView.renderBasketTotalPrice(cartModel.getTotalPrice());
+    }
+
+    if (action === "minus") {
+      const product = cartModel.updateCounter(productId, action);
+      basketView.updateCounter(product);
+      basketView.renderBasketTotalProducts(cartModel.getTotalProducts());
+      basketView.renderBasketTotalPrice(cartModel.getTotalPrice());
+    }
+
+    if (action === "delete") {
+      cartModel.removeFromCart(productId)
+
+      basketView.removeProduct(productId)
+      basketView.renderProducts(cartModel.cart)
+      basketView.renderBasketTotalProducts(cartModel.getTotalProducts());
+      basketView.renderBasketTotalPrice(cartModel.getTotalPrice());
+    }
+  })
 }

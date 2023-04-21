@@ -1180,6 +1180,7 @@ input[type="email"] {
 
   .modal-cart {
     right: -54px;
+    top: 54px;
   }
 
 }

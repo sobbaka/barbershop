@@ -62,22 +62,25 @@ export default class Model {
   }
 
   removeFromCart(id) {
+    const product = this.getProduct(id);
     const index = this.cart.findIndex(item => item.id === id);
     if (index !== -1) {
-      arr.splice(index, 1);
+      this.cart.splice(index, 1);
     }
+    this.saveCartToLocalStorage();
+    return product;
   }
 
 
-  increaseCounter(id) {
-    const product = this.getProduct(id);
+  // increaseCounter(id) {
+  //   const product = this.getProduct(id);
 
-  }
+  // }
 
-  descreaseCounter(id) {
-    const product = this.getProduct(id);
-    product.counter -= 1;
+  // descreaseCounter(id) {
+  //   const product = this.getProduct(id);
+  //   product.counter -= 1;
 
-    if (product.counter === 0) { }
-  }
+  //   if (product.counter === 0) { }
+  // }
 }

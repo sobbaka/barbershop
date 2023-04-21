@@ -51,15 +51,15 @@ export default class View {
       </div>
       <div class="product-card__column">
       <div class="product-card__info">
-        <span class="product-card__price">${item.price} ₽ / ${itemTotalPrice} ₽</span>
+        <div class="product-card__price">${item.price} ₽ / <span data-totalPrice>${itemTotalPrice}</span> ₽</div>
         <div class="product-card__quantity">
           <span class="product-card__minus product-card__control" data-action="minus">-</span>
-          <span class="product-card__total">${item.counter} шт.</span>
+          <div class="product-card__total"><span data-totalNumber>${item.counter}</span> шт.</div>
           <span class="product-card__plus product-card__control" data-action="plus">+</span>
         </div>
       </div>
       <button type="button" class="product-card__delete-btn" data-action="delete">
-        <img src="./img/icons/delete-button.svg" alt="" class="product-card__delete-icon">
+        <img src="./img/icons/delete-button.svg" alt="" class="product-card__delete-icon" data-action="delete">
       </button>
 
       </div>
@@ -74,4 +74,23 @@ export default class View {
     this.elements.basketWrapper.innerHTML = result;
   }
 
+
+  updateCounter(product) {
+    const productWrapper = this.elements.basketWrapper.querySelector(`[data-id='${product.id}']`);
+
+    if (product.counter < 1) {
+      return productWrapper.remove();
+    }
+
+    const totalPrice = productWrapper.querySelector("[data-totalPrice]");
+    totalPrice.innerHTML = product.price * product.counter;
+
+    const totalNumber = productWrapper.querySelector("[data-totalNumber]");
+    totalNumber.innerHTML = product.counter;
+  }
+
+  removeProduct(productId) {
+    const productWrapper = this.elements.basketWrapper.querySelector(`[data-id='${productId}']`);
+    productWrapper.remove();
+  }
 }
